@@ -2,11 +2,11 @@
 
 namespace App\Entity;
 
-use App\Repository\BeesRepository;
+use App\Repository\BeeRepository;
 use Doctrine\ORM\Mapping as ORM;
 
-#[ORM\Entity(repositoryClass: BeesRepository::class)]
-class Bees
+#[ORM\Entity(repositoryClass: BeeRepository::class)]
+class Bee
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
