@@ -1,6 +1,6 @@
 <?php 
 
-namespace APP\Services;
+namespace App\Services;
 
 use App\Entity\Bee;
 
@@ -8,12 +8,12 @@ use App\Entity\Bee;
  * Create bees to begin the game
  * 
  */
-class Starter {
+class StarterService {
 
     /**
      * create Queen bee
      *
-     * @return void
+     * @return Bee::class
      */
     public function queen() {
         $queen = new Bee();
@@ -24,10 +24,10 @@ class Starter {
     }
 
     /**
-     * create Worker bees
-     *
+     * Creat Workers bee
+     *  
      * @param int $number
-     * @return void
+     * @return array
      */
 
      public function workers($number) {
@@ -48,7 +48,7 @@ class Starter {
      * Creat Scout bee
      *  
      * @param int $number
-     * @return void
+     * @return array
      */
     public function scouts($number) {
         $scouts = [];

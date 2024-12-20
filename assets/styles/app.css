@@ -1,3 +1,39 @@
 body {
     background-color: skyblue;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper{
+    margin: 0;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: aliceblue;
+}
+
+.wrapper li{
+    list-style-type: none;
+}
+
+.screen-game{
+    width: 450px;
+    height: 300px;
+    background-color: black;
+    border: 1px solid grey;
+    margin: 8px;
+    position: relative;
+}
+
+.btn{
+    background-color: yellowgreen;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    position: absolute;
+    top: 270px;
+    left: 390px;
+    padding: 4px;
 }
