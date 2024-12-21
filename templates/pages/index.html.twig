@@ -12,8 +12,8 @@
             <li > {{ bee.type }} - <span data-hitbees-target="point"  id="{{ bee.id }}">{{ bee.point }}</span></li>
         {% endfor %}      
     </ul>
-    <div class="screen-game" >
-        <a href="#" class="btn" id="hit-btn"  data-action='hitbees#hit'> HIT !!</a>
+    <div class="screen-game" data-controller="flyingbees">
+        <a href="#" class="btn" id="hit-btn" data-action='hitbees#hit'> HIT !!</a>
     </div>
 </div>
 {% endblock %}

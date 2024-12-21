@@ -21,11 +21,8 @@ export default class extends Controller {
                 if(data.message){
                     alert(data.message)
                 }
-        
-
-                }
-            );
-        
-        }
+            }
+        );    
+    }
 
 }
