@@ -5,15 +5,15 @@
 {% block body %}
 
 
-<div class="wrapper">
+<div class="wrapper" data-controller="hitbees" data-hitbees-id-value= {{ id }} data-hitbees-url-value="/bee/">
 
     <ul>
         {% for bee in bees %}
-            <li>{{ bee.type }} - {{ bee.point }}</li>
+            <li id="{{ bee.id }}"> {{ bee.type }} - {{ bee.point }}</li>
         {% endfor %}      
     </ul>
-    <div class="screen-game">
-        <a href="{{ path('hit_bees') }}" class="btn" id="hit-btn"> HIT !!</a>
+    <div class="screen-game" >
+        <a href="#" class="btn" id="hit-btn"  data-action='hitbees#hit'> HIT !!</a>
     </div>
 </div>
 {% endblock %}
