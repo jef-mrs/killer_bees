@@ -3,24 +3,28 @@ import { Controller } from '@hotwired/stimulus';
 export default class extends Controller {
 
     static values = {
-        id: Number,
         url: String
     };
+    static targets = ["point"]
+
     connect() {
-        
+
     }
 
     
     hit(event){
-        event.preventDefault()
-        fetch(this.urlValue +this.idValue+'/hit')
+        event.preventDefault();
+        fetch(this.urlValue)
             .then(response => response.json())
             .then(data => {
-                let bee = document.getElementById(data.id)
-                bee.textContent = data.type+' - '+data.point;
-                console.log(data)
-                    }
-                );
+                document.getElementById(data.id).textContent = data.point;
+                if(data.message){
+                    alert(data.message)
+                }
+        
+
+                }
+            );
         
         }
 

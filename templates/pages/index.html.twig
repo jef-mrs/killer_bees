@@ -5,11 +5,11 @@
 {% block body %}
 
 
-<div class="wrapper" data-controller="hitbees" data-hitbees-id-value= {{ id }} data-hitbees-url-value="/bee/">
+<div class="wrapper" data-controller="hitbees" data-hitbees-url-value="{{ path('hit_bees')}}">
 
     <ul>
         {% for bee in bees %}
-            <li id="{{ bee.id }}"> {{ bee.type }} - {{ bee.point }}</li>
+            <li > {{ bee.type }} - <span data-hitbees-target="point"  id="{{ bee.id }}">{{ bee.point }}</span></li>
         {% endfor %}      
     </ul>
     <div class="screen-game" >
