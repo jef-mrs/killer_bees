@@ -60,25 +60,25 @@ class StarterService {
 
     public function resetPoint($bees, $em){
 
-        foreach ($bees as $bee){
-            
+        foreach($bees as $bee){
             switch ($bee->getType())
             {
-                case 'queen';  
+                case 'Queen';  
                     $bee->setPoint(100);
-                    $em->persist();
+                    $em->persist($bee);
                     break;
-                case 'worker';
+                case 'Worker';
                     $bee->setPoint(50);
-                    $em->persist();
+                    $em->persist($bee);
                     break;
-                case 'scout';
+                case 'Scout';
                     $bee->setPoint(30);
-                    $em->persist();
+                    $em->persist($bee);
                     break;
             }
+ 
         }
-;  // Flush the database to persist the bees.  This is a good practice, especially when working with Doctrine ORM.  It ensures that the changes are persisted to the database.  It also allows for more complex database operations.  In this case, we're just adding entities to the database.  If we were updating or deleting entities, we would use a different approach.
+
     }
 
 }

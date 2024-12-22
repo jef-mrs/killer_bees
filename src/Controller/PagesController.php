@@ -17,7 +17,7 @@ class PagesController extends AbstractController
     public function index(StarterService $starter, EntityManagerInterface $em, BeeRepository $beeRepository): Response{
     
         if (count($beeRepository->findAll()) > 0){
-            // Reset bee points to their original values if they were modified during a previous game.
+            // If there are bees in the database, reset their points to the starting values.
             $starter->resetPoint($beeRepository->findAll(), $em);
             $em->flush();
             // Retrieve bees from the database to display on the homepage.

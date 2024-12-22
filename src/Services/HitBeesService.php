@@ -29,7 +29,11 @@ class HitBeesService {
         return $bee;
     }
 
-
+    /**
+     * 
+     * Function to choose the bee who be hit
+     * 
+     */
     public function chooseBee($bees){
         $key = array_rand($bees);
         while($bees[$key]->getPoint()<= 0){
@@ -38,6 +42,11 @@ class HitBeesService {
         return $bees[$key];
     }
 
+    /**
+     * 
+     * Function to check if all bees are dead
+     * 
+     */
     public function isOneBeeAlive($bees) {
         foreach($bees as $bee){
             if($bee->getPoint() > 0){
@@ -47,6 +56,11 @@ class HitBeesService {
         return false;
     }
 
+    /**
+     * 
+     * Function to make a bee die
+     * 
+     */
     private function dyingBee($bee){
         if($bee->getPoint() < 0){
             $bee->setPoint(0);
