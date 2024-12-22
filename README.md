@@ -6,7 +6,7 @@ This document outlines the implementation of a PHP application that simulates a 
 ## Implementation Details
 
 * **Framework:**
-    * Built upon the **Symfony** framework, leveraging its robust components and features.
+    * Built upon the **Symfony** frameworks.
 * **Controllers:**
     * Symfony controllers handle user requests, process game logic, and render the appropriate views.
 * **Services:**
