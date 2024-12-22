@@ -17,10 +17,9 @@ export default class extends Controller {
             .then(data => {
                 document.getElementById(data.id).textContent = data.point;
                 if(data.message){
-                    console.log(data.message)
                     document.getElementById('message').style.display = 'block';
                     document.getElementById('message-content').textContent = data.message;
-
+                    document.getElementById('hit-btn').remove();
                 }
             }
         );    
