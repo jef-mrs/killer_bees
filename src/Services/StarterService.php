@@ -58,6 +58,13 @@ class StarterService {
         }
     }
 
+    /**
+     * reset point for all bees
+     *
+     * @param array $bees
+     * @param $em
+     * @return void
+     */
     public function resetPoint($bees, $em){
 
         foreach($bees as $bee){
