@@ -16,7 +16,7 @@ class PagesController extends AbstractController
     #[Route('/', name: 'home')]
     public function index(StarterService $starter, EntityManagerInterface $em, BeeRepository $beeRepository): Response{
     
-        if ($beeRepository->findAll() > 0){
+        if (count($beeRepository->findAll()) > 0){
             // Reset bee points to their original values if they were modified during a previous game.
             $starter->resetPoint($beeRepository->findAll(), $em);
             $em->flush();

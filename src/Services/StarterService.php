@@ -62,7 +62,7 @@ class StarterService {
 
         foreach ($bees as $bee){
             
-            switch ($bee->getType)
+            switch ($bee->getType())
             {
                 case 'queen';  
                     $bee->setPoint(100);
