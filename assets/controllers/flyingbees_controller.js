@@ -6,7 +6,7 @@ export default class extends Controller {
     
     connect() {
 
-        setInterval(this.flying, 1000);
+        setInterval(this.flying, 3000);
     }
 
     flying() {
