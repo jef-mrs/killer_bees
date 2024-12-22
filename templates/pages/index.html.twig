@@ -3,21 +3,18 @@
 {% block title %}Hello PagesController!{% endblock %}
 
 {% block body %}
-
-
-<div class="wrapper" data-controller="hitbees" data-hitbees-url-value="{{ path('hit_bees')}}">
-
-    <ul>
-        {% for bee in bees %}
-            <li > {{ bee.type }} - <span data-hitbees-target="point"  id="{{ bee.id }}">{{ bee.point }}</span></li>
-        {% endfor %}      
-    </ul>
-    <div class="screen-game" data-controller="flyingbees">
-        <a href="#" class="btn" id="hit-btn" data-action='hitbees#hit'> HIT !!</a>
+    <div class="wrapper" data-controller="hitbees" data-hitbees-url-value="{{ path('hit_bees')}}">
+        <ul>
+            {% for bee in bees %}
+                <li > {{ bee.type }} - <span data-hitbees-target="point"  id="{{ bee.id }}">{{ bee.point }}</span></li>
+            {% endfor %} 
+        </ul>
+        <div class="screen-game" data-controller="flyingbees">
+            <a href="#" class="btn" id="hit-btn" data-action='hitbees#hit'> HIT !!</a>
+        </div>
     </div>
-</div>
-<div id="message">
-    <p id="message-content"></p>
-    <a href="{{ path('home')}}"> Restart </a>
-</div>
+    <div id="message">
+        <p id="message-content"></p>
+        <a href="{{ path('home')}}"> Restart </a>
+    </div>
 {% endblock %}
