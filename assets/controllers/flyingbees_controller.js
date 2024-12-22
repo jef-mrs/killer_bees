@@ -13,7 +13,7 @@ export default class extends Controller {
 
             document.getElementById('hit-btn').style['left'] = `${Math.random() * 90}%`
             document.getElementById('hit-btn').style['top'] = `${Math.random() * 90}%`
-            // console.log('hello')
+
 
         }
     

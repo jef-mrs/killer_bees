@@ -5,13 +5,11 @@ export default class extends Controller {
     static values = {
         url: String
     };
-    static targets = ["point"]
 
     connect() {
 
     }
-
-    
+ 
     hit(event){
         event.preventDefault();
         fetch(this.urlValue)

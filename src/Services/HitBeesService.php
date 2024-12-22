@@ -15,23 +15,22 @@ class HitBeesService {
         switch ($bee->getType()){
             case 'Queen':
                 $bee->setPoint($bee->getPoint() - 15);
-
                 break;
             case 'Worker':
                 $bee->setPoint($bee->getPoint() - 20);
-
                 break;
             case 'Scout':
                 $bee->setPoint($bee->getPoint() - 15);
-
                 break;
-
         }
+
+        $bee = $this->dyingBee($bee);
+
         return $bee;
     }
 
 
-    public function setHittingBee($bees){
+    public function chooseBee($bees){
         $key = array_rand($bees);
         while($bees[$key]->getPoint()<= 0){
             $key = array_rand($bees);
@@ -48,7 +47,7 @@ class HitBeesService {
         return false;
     }
 
-    public function dyingBee($bee){
+    private function dyingBee($bee){
         if($bee->getPoint() < 0){
             $bee->setPoint(0);
         }
